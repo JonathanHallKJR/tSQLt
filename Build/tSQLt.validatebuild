@@ -273,7 +273,7 @@
   <call target="execute.sql.file" />
  </target>
 
- <target name="validate.Example" description="run the tests">
+ <target name="validate.Example" description="run the tests" depends="deploy.Example">
   <echo message="##teamcity[progressMessage 'Validating Example']" />
   <property name="execute.sql.database" value="tSQLt_Example" />
   <property name="execute.sql.outputfile" value="output/ExampleTestResults.xml" />
