@@ -677,7 +677,7 @@ BEGIN
     INSERT INTO tSQLt.TestResult (Class, TestCase, Result, TestStartTime, TestEndTime)
     VALUES ('MyTestClass2', 'testC', 'Failure', '2015-07-24T00:00:01.111', '2015-08-17T20:31:24.758');
     INSERT INTO tSQLt.TestResult (Class, TestCase, Result, TestStartTime, TestEndTime)
-    VALUES ('MyTestClass2', 'testD', 'Error', '2015-07-24T00:00:01.666', '2015-07-24T00:00:01.669');
+    VALUES ('MyTestClass2', 'testD', 'Error', '2015-07-24T00:00:01.663', '2015-07-24T00:00:01.670');
     
     EXEC tSQLt.XmlResultFormatter;
     
@@ -702,7 +702,7 @@ BEGIN
     INSERT INTO #Expected
     VALUES('MyTestClass2', 'testC', '2147483.646');
     INSERT INTO #Expected
-    VALUES('MyTestClass2', 'testD', '0.003');
+    VALUES('MyTestClass2', 'testD', '0.007');
 
     EXEC tSQLt.AssertEqualsTable '#expected','#actual';
 END;
